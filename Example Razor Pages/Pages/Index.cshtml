@@ -23,4 +23,10 @@
             <button type="submit">Save</button>
         </p>
     </form>
+    <p>
+        @if(Model.Email.Length < 3)
+        {
+            <span>Please enter an email</span>
+        }
+    </p>
 </div>
