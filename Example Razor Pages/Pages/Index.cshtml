@@ -17,16 +17,16 @@
         </p>
         <p>
             <label>Email Address:</label>
-            <input type="email" required="true" />
+            <input type="email" asp-for="Email" required="true" />
         </p>
         <p>
             <button type="submit">Save</button>
         </p>
     </form>
     <p>
-        @if(Model.Email.Length < 3)
+        @if(!String.IsNullOrEmpty(Model.Email))
         {
-            <span>Please enter an email</span>
+            <span>Thank You @Model.Fullname for registering </span>
         }
     </p>
 </div>
